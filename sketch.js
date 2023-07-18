@@ -1,3 +1,5 @@
+//this is a modification for GIT
+
 let geneticBach;
 let targetPhrase = 'Genetic Algorithm';
 let mutationRate = 0.015;
