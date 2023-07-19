@@ -16,7 +16,7 @@ class Population {
         this.best = ""; // just to print the best phrase on screen
 
         for (let i = 0; i < num; i++) {
-            this.population[i] = new DNA(this.target.length);
+            this.population[i] = new dna(this.target.length);
             // array of arrays [, , , , ] -> [[A,B,C,D], [A,x,C,r], [w,?,s,A], ....]
         }
     }
