@@ -9,6 +9,11 @@ const app = Vue.createApp({
             author: 'loquita',
             age: 34
         }
-    }
+    },
+    methods: {
+        changeAutor() {
+            this.author = 'Dovstoyesky'
+        }
+    } 
 })
 app.mount('#app')
