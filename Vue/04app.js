@@ -4,12 +4,15 @@ const app = Vue.createApp({
 
     data() {
         return {
+            url:'www.google.com',
             showBooks: true,
-            title: 'I am the template',
-            author: 'loquita',
-            age: 34,
-            x: 0,
-            y: 0
+            books:  [
+                {title: 'I am the template',author: 'VF'},
+                {title: 'Relacionismo', author: 'desespero'},
+                {title: 'Conexionismo', author: 'Sabina'},
+
+            ]
+            
         }
     },
     methods: {
@@ -17,13 +20,8 @@ const app = Vue.createApp({
             //this.author = 'Dovstoyesky'
             this.showBooks = !this.showBooks
         },
-        handleEvents(e,n) { 
-            console.log(n,e,e.type,'your mouse is over the rectangle');
-        }, 
-        handleMouseMove(e) {
-            this.x = e.offsetX
-            this.y = e.offsetY
-        }
+       
+        
         
     } 
 })

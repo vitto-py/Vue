@@ -21,10 +21,19 @@
     <h1>Hello, Vue js</h1>
 
     <div id="app">
+        <!-- Attribute binding: look fot the VAR url, not the text url -->
+        <a v-bind:href="url">go to google</a>
+        
         <div v-if="showBooks">
-            <p>{{ title }} - {{author}} - {{age}}</p>
-            
+            <!--FOR CYCLE
+                <p> {{ books[1].title }} - {{books[1].author}} </p>--> 
+            <ul>
+                <li v-for="x in books">
+                    <p> {{ x.title }} - {{x.author}} </p>
+                </li>
+            </ul>         
         </div>
+
         <button @click="toggleShowBooks()">
             <!-- Toggle this is only  -->
             <span v-if="showBooks">Hide Books</span>
@@ -35,16 +44,12 @@
         <br>
         <!-- mouse events -->
 
-        <div class="box" @mouseover = handleEvents($event,5) >mouse over</div>
-        <div class="box" @mouseleave = handleEvents($event,1) >mouse leave</div>
-        <div class="box" @dblclick = handleEvents($event,2) >double click</div>
-        <div class="box" @mousemove = handleMouseMove($event)>position - {{x}}, {{y}}</div>
         <!-- 
         
          -->
 
     </div>
-    <script src="03app.js"></script>
+    <script src="04app.js"></script>
 
 </body>
 </html>
