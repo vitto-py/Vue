@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Dani e insoportabile</title>
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: red;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
+
+</head>    
+
+<body>
+    <h1>Hello, Vue js</h1>
+
+    <div id="app">
+        <div v-if="showBooks">
+            <p>{{ title }} - {{author}} - {{age}}</p>
+            
+        </div>
+        <button @click="toggleShowBooks()">
+            <!-- Toggle this is only  -->
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+
+        </button>
+
+        <br>
+        <!-- mouse events -->
+
+        <div class="box" @mouseover = handleEvents($event,5) >mouse over</div>
+        <div class="box" @mouseleave = handleEvents($event,1) >mouse leave</div>
+        <div class="box" @dblclick = handleEvents($event,2) >double click</div>
+        <div class="box" @mousemove = handleMouseMove($event)>position - {{x}}, {{y}}</div>
+        <!-- 
+        
+         -->
+
+    </div>
+    <script src="03app.js"></script>
+
+</body>
+</html>
