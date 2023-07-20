@@ -11,8 +11,9 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        changeAutor() {
-            this.author = 'Dovstoyesky'
+        changeAutor(a) {
+            //this.author = 'Dovstoyesky'
+            this.author = a
         }
     } 
 })
