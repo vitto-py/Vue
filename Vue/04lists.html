@@ -6,10 +6,9 @@
     <title>Dani e insoportabile</title>
     <style>
         .box {
-            padding: 100px 0;
-            width: 400px;
-            text-align: center;
-            background: red;
+            padding: 10px 0;
+            width: 200px;
+
             margin: 20px;
             display: inline-block;
         }
@@ -23,13 +22,14 @@
     <div id="app">
         <!-- Attribute binding: look fot the VAR url, not the text url -->
         <a v-bind:href="url">go to google</a>
-        
+
         <div v-if="showBooks">
-            <!--FOR CYCLE
+            <!--FOR CYCLE :bind inside for
                 <p> {{ books[1].title }} - {{books[1].author}} </p>--> 
             <ul>
                 <li v-for="x in books">
                     <p> {{ x.title }} - {{x.author}} </p>
+                    <img class="box" :src="x.image" :alt="x.title">
                 </li>
             </ul>         
         </div>

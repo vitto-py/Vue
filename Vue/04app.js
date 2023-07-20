@@ -7,9 +7,9 @@ const app = Vue.createApp({
             url:'www.google.com',
             showBooks: true,
             books:  [
-                {title: 'I am the template',author: 'VF'},
-                {title: 'Relacionismo', author: 'desespero'},
-                {title: 'Conexionismo', author: 'Sabina'},
+                {title: 'I am the template',author: 'VF', image: 'assets/1.jpg'},
+                {title: 'Relacionismo', author: 'desespero', image: 'assets/2.jpeg'},
+                {title: 'Conexionismo', author: 'Sabina', image: 'assets/3.jpeg'},
 
             ]
             
