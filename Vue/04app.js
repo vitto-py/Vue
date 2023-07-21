@@ -1,7 +1,6 @@
 console.log("new file")
 
 const app = Vue.createApp({
-
     data() {
         return {
             url:'www.google.com',
@@ -16,9 +15,10 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        toggleShowBooks() {
-            //this.author = 'Dovstoyesky'
-            this.showBooks = !this.showBooks
+        toggleShowBooks(x) {
+            //change the propertie isFav if dblclick
+            console.log('toggleShowBooks');
+            x.isFav = !x.isFav;
         },
        
         

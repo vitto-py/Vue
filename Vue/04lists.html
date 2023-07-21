@@ -34,6 +34,7 @@
         }
         li.fav {
             background: #ff9ed2;
+            color:azure;
         }
     </style>
 
@@ -47,15 +48,15 @@
         v-bind: or :
     -->
         <a v-bind:href="url">go to google</a>
-
+        <!-- THE SAME <a :href="url">go to google</a> -->
         <div v-if="showBooks">
             <!--FOR CYCLE :bind inside for
                 <p> {{ books[1].title }} - {{books[1].author}} </p>--> 
             <ul>
                 <li v-for="x in books" v-bind:class="{fav: x.isFav}">
-                    <!-- this will add the class isFav if is presented -->
+                    <!-- this will add the class if isFav=True -->
                     <p> {{ x.title }} - {{x.author}} </p>
-                    <img class="box" :src="x.image" :alt="x.title">
+                    <img @dblclick = toggleShowBooks(x) class="box" :src="x.image" :alt="x.title">
                 </li>
             </ul>         
         </div>
