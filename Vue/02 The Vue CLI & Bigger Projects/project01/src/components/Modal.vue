@@ -2,7 +2,8 @@
     <div class="backdrop">
         <div class="modal" >
             <h1>{{header}}</h1>
-            <p>Modal Content</p>
+            <h3>{{ aComplexOne[0] }}</h3>
+            <p>{{ninga}}</p>
         </div>
     </div>
 </template>
@@ -10,7 +11,7 @@
 <script>
 //use of props: (receive a value from the code, save it as data)
 export default {
-    props: ['header'] // in the HTML must be a header="I am a text"
+    props: ['header', 'ninga', 'aComplexOne'] // in the HTML must be a header="I am a text"
     //now is available in here {{header}}
 }
 </script>

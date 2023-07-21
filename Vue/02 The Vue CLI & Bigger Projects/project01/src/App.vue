@@ -1,6 +1,7 @@
 <template>
   <h1>{{title}}</h1>
-  <Modal_M header="Sending this message to Modal" />
+  <Modal_M header="Sending this message to Modal" ninga="I am a second props"
+  :aComplexOne = "['texto', 4]"/>
   <input type="text" ref="imALink">
   <button @click="handleClick">send</button>
    
