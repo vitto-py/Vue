@@ -7,7 +7,9 @@
     </div>
 </template>
 
-<style>
+<style scoped>
+/* Now this styles apply this component 
+go InspectQ and see the html, creates a new atributte*/
 .modal {
     width: 400px;
     padding: 10px;

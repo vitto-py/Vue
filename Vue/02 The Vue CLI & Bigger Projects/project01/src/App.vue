@@ -1,6 +1,6 @@
 <template>
   <h1>{{title}}</h1>
-  <Modal></Modal>
+  <Modal_M></Modal_M>
   <input type="text" ref="imALink">
   <button @click="handleClick">send</button>
    
@@ -9,11 +9,11 @@
 <script>
 
 //import from the folder component
-import Modal from "./components/Modal.vue"
+import Modal_M from "./components/Modal.vue"
 
 export default {
   name: 'App', //name of the component
-  components: {Modal}, //to use Modal
+  components: {Modal_M}, //to use Modal
   data() {
     return {
       title: 'my first vue App'
@@ -29,8 +29,7 @@ export default {
 }
 </script>
 
-<style scoped> /* Now this styles apply this component 
-go InspectQ and see the html, creates a new atributte*/
+<style> 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
