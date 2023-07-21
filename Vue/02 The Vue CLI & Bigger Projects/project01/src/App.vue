@@ -1,13 +1,19 @@
 <template>
   <h1>{{title}}</h1>
-   <input type="text" ref="imALink">
-   <button @click="handleClick">send</button>
+  <Modal></Modal>
+  <input type="text" ref="imALink">
+  <button @click="handleClick">send</button>
+   
 </template>
 
 <script>
 
+//import from the folder component
+import Modal from "./components/Modal.vue"
+
 export default {
   name: 'App', //name of the component
+  components: {Modal}, //to use Modal
   data() {
     return {
       title: 'my first vue App'
