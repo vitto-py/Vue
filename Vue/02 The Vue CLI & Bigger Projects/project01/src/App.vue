@@ -1,15 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>{{title}}</h1>
+   <input type="text" ref="imALink">
+   <button @click="handleClick">send</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: 'App', //name of the component
+  data() {
+    return {
+      title: 'my first vue App'
+    }
+  },
+  methods: {
+    handleClick() {
+      console.log(this.$refs.imALink) //look how it connects ref
+      this.$refs.imALink.classList.add('active') //inspect the HTML to see how the class is added
+      this.$refs.imALink.focus()
+    }
   }
 }
 </script>
@@ -22,5 +31,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #2c3e50;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 </style>
