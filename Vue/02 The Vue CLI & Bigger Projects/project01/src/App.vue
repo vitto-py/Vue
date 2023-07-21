@@ -29,7 +29,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped> /* Now this styles apply this component 
+go InspectQ and see the html, creates a new atributte*/
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
