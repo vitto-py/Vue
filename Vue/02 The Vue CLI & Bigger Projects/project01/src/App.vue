@@ -1,6 +1,6 @@
 <template>
   <h1>{{title}}</h1>
-  <Modal_M></Modal_M>
+  <Modal_M header="Sending this message to Modal" />
   <input type="text" ref="imALink">
   <button @click="handleClick">send</button>
    

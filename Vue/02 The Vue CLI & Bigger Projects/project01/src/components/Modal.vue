@@ -1,11 +1,19 @@
 <template>
     <div class="backdrop">
         <div class="modal" >
-            <h1>Title H1</h1>
+            <h1>{{header}}</h1>
             <p>Modal Content</p>
         </div>
     </div>
 </template>
+
+<script>
+//use of props: (receive a value from the code, save it as data)
+export default {
+    props: ['header'] // in the HTML must be a header="I am a text"
+    //now is available in here {{header}}
+}
+</script>
 
 <style scoped>
 /* Now this styles apply this component 
