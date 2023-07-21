@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Dani e insoportabile</title>
+
+</head>    
+
+<body>
+    <h1>Hello, Vue js</h1>
+    <div id="app">
+        <p>{{ title }} - {{author}} - {{age}}</p>
+        <button v-on:click="age++">age++</button>
+        <button v-on:click="age--">age--</button>
+        <div v-on:click="title = 'You will day'">Click over here</div>
+        <!-- <div v-on:click="changeAutor">Click there here</div> -->
+        <div @click="changeAutor('from here')">Click there here</div> 
+    </div>
+    <script src="01app.js"></script>
+
+</body>
+</html>
