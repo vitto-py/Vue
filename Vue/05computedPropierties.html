@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Dani e insoportabile</title>
+    <style>
+        .box {
+            padding: 10px 0;
+            width: 200px;
+
+            margin: 20px;
+            display: inline-block;
+        }
+
+        p, h3, ul {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 20px auto;
+            max-width: 960px;
+            background: yellow;
+        }
+        li {
+            background: #fff;
+            list-style-type: none;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content:  space-between;
+        }
+        li.fav {
+            background: #ff9ed2;
+            color:azure;
+        }
+    </style>
+
+</head>    
+
+<body>
+    <h1>Hello, Vue js</h1>
+
+    <div id="app">
+        <!--  -->
+        <p>
+            Computer propierties are dynamic, they change with the data, we are going
+            to cycle over computedArray(), filtering out those whose isFav=false <br>
+            double click over the li for event false
+        </p>
+        <div v-if="showBooks">
+            <ul>
+                <li v-for="x in computedArray" @dblclick = toggleShowBooks(x)>
+                    <!-- this will add the class if isFav=True -->
+                    <p> {{ x.title }} - {{x.author}} </p>
+                    <img  class="box" :src="x.image" :alt="x.title">
+                </li>
+            </ul>         
+        </div>
+
+        <button @click="toggleShowBooks()">
+            <!-- Toggle this is only  -->
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+
+        </button>
+
+        <br>
+
+    </div>
+    <script src="05app.js"></script>
+
+</body>
+</html>
