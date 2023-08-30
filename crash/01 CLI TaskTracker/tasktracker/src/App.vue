@@ -16,7 +16,7 @@ export default {
   /* Aqui tambien */
   components: {
     Header,
-    Tasker
+    Tasker,
   },
   //create the variable
   data() {
@@ -26,7 +26,10 @@ export default {
   },
   //fill in the variable
   created() {
-    this.taskList = [{ text: "Dentist" }, { text: "Football" }];
+    this.taskList = [
+      { id: 0, text: "Dentist" },
+      { id: 1, text: "Football" },
+    ];
   },
 };
 </script>
