@@ -1,28 +1,38 @@
 <template>
- <div class=".container">
-  <Header />
- </div>
-  
+  <div class="container">
+    <Header title="Task Tracker" />
+    <Tasker :tasks="taskList" />
+  </div>
 </template>
 
 <script>
 /* Aqui llamas a los componentes pero para usarlos
 tenes que declararlos en export default > components > Header */
-import Header from './components/Header.vue'
+import Header from "./components/Header.vue";
+import Tasker from "./components/Tasker.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   /* Aqui tambien */
   components: {
-    Header
-  }
-}
+    Header,
+    Tasker
+  },
+  //create the variable
+  data() {
+    return {
+      taskList: [],
+    };
+  },
+  //fill in the variable
+  created() {
+    this.taskList = [{ text: "Dentist" }, { text: "Football" }];
+  },
+};
 </script>
 
-
-
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
 * {
   box-sizing: border-box;
@@ -31,7 +41,7 @@ export default {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
